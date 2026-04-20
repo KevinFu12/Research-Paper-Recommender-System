@@ -1,0 +1,2 @@
+.\cloud-sql-proxy.exe big-data-project-493306:asia-east2:big-data-project --port 5432
+npm run dev
