@@ -11,12 +11,11 @@ class PaperSearchService
 
     public function __construct()
     {
-
-        $this->bigQuery = new BigQueryClient([
-            'projectId' => config('services.bigquery.project_id')
+        $this->bigQuery = new \Google\Cloud\BigQuery\BigQueryClient([
+            'projectId' => env('BIGQUERY_PROJECT_ID'),
         ]);
         
-        $this->dataset = config('services.bigquery.dataset');
+        $this->dataset = env('BIGQUERY_DATASET');
     }
 
     public function search($query)
